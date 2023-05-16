@@ -1,0 +1,32 @@
+.App {
+  font-family: helvetica;
+  text-align: center;
+  display: flex;
+  
+}
+
+.home-page {
+  text-align: center;
+  background-color: aqua;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color:blueviolet;
+  color: white;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+nav a {
+  color: rgb(174, 116, 215);
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
