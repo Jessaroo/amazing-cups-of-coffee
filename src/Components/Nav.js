@@ -5,7 +5,7 @@ function Nav(props) {
         <nav className="navbar">
             <div className="nav-container">
                 <Link to="/" className="nav-link">Home</Link>
-                <a href="https://www.thecocktaildb.com/browse.php?s=coffee" className="nav-link">Coffee Index</a>
+                <Link to="/RecipeChoices" className="nav-link">Recipes Index</Link>
             </div>
         </nav>
     );

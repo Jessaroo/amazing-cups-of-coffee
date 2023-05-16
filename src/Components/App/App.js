@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from '../../pages/HomePage/HomePage';
+// import HomePage from '../../pages/HomePage/HomePage';
 import RecipeChoices from '../../pages/RecipeChoices/RecipeChoices';
 import RecipeDetail from '../../pages/RecipeDetail/RecipeDetail';
 
@@ -13,9 +13,8 @@ function App() {
       <Nav />
       <main className="container">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/recipe" element={<RecipeChoices />} />
-          <Route path="/recipe/:id" element={<RecipeDetail />} />
+          <Route exact path="/recipe-choices" component={<RecipeChoices />} />
+          <Route exact path="/recipe-detail/:id" component={<RecipeDetail />} />
         </Routes>
       </main>
     </div>
@@ -23,3 +22,9 @@ function App() {
 }
 
 export default App;
+
+
+
+//<Route path="/" element={<HomePage />} />//
+//<Route path="/recipe-choices" element={<RecipeChoices />} />//
+//<Route path="/recipe-detail/:id" element={<RecipeDetail />} />//

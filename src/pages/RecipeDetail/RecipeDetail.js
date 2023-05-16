@@ -7,14 +7,13 @@ function RecipeDetail(props) {
     // construct a url for fetching recipe details
     const url = 'https://www.thecocktaildb.com/browse.php?s=coffee' + id;
     // initialize recipe state
-    const [ RecipeDetail, setRecipeDetail ] = useState(null);
+    const [ recipeData, setRecipeData ] = useState(null);
     // fetch recipe details and use the corresponding data to set state
     const fetchRecipeDetail = async () => {
         try {
             const response = await fetch(url);
-            const RecipeData = await response.json();
-            setRecipeDetail(RecipeDetail);
-            console.log(RecipeDetail);
+            const recipeData = await response.json();
+            setRecipeData(recipeData);
         } catch (error) {
             console.error(error);   
         }
@@ -27,28 +26,31 @@ function RecipeDetail(props) {
     const loading = () => {
         return <h1>Loading ...</h1>;
     };
+
     const loaded = () => {
+        const { strDrink, recipe } = recipeData.drinks[0];
         return (
            <div>
-                <h2>{RecipeDetail.name}</h2>
+                <h2>{strDrink}</h2>
                 <div>
                     <h3>Coffee Recipes</h3>
                     <ul>
-                        <li>RecipeDetail Name: {RecipeDetail.recipeDetail_name}</li>
-                        <li>Ingredients: {RecipeDetail.recipeDetail_ingredients}</li>
+                        {recipe.map((ingredient, index) => (
+                        <li key ={index}>{ingredient}</li>
+                        ))}
                     </ul>
                 </div>
                 <div>
                     <h3>Recipe Ingredients</h3>
                     <ul>
-                        <li>Appears in {RecipeDetail.recipe?.length} recipe{RecipeDetail.recipe?.length > 1 ? "s": ""}</li>
+                        <li>Appears in {recipe.length} recipe{recipe.length > 1 ? 's': ''}</li>
                     </ul>
                 </div>
            </div> 
         );
     };
     
-    return <section>{RecipeDetail ? loaded() : loading()}</section>;
+    return <section>{RecipeData ? loaded() : loading()}</section>;
 }
 
 export default RecipeDetail;

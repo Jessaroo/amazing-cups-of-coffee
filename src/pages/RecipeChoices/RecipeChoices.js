@@ -2,70 +2,60 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function RecipeChoices(props) {
-    const [ recipe, setRecipe ] = useState([]);
+    const [ recipe, setRecipeDetail ] = useState([]);
 
     // helper function for performing AJAX
-    const fetchRecipe = async () => {
+    const fetchRecipeDetail = async () => {
         try {
             // 1) use the fetch function to make an HTTP request to SWAPI
             const response = await fetch('https://www.thecocktaildb.com/browse.php?s=coffee');
             // 2) take the response response object that gets returned from the fetch function parse it's incoming json body
             const recipeData = await response.json();
             // 3) set the ships state with the returned JSON data
-            setRecipe(recipeData.results);
+            setRecipeDetail(recipeData.results);
         } catch (error) {
-            
+            console.error(error);
         }
     };
 
     useEffect(() => {
-        fetchRecipe();
+        fetchRecipeDetail();
     }, []);
 
     return (
         <div className="recipe-choices">
-            {recipe.map(recipe => {
-                const {name, url} = recipe;
-                const path = url.split('/');
-                const id = path[path.length - 2];
+            {recipes.map(recipe => {
+                const { name, idDrink} = recipeDetail;
                 return (
-                    <Link to={`/recipe/${id}`} key={id}>
-                        <h1>{name}</h1>
-                    </Link>
-                )
+                    <div key={idDrink}>
+                        <Link to={`/recipeDetail/${idDrink}`}>
+                            <h1>{name}</h1>
+                        </Link>
+                    </div>
+                );
             })}
         </div>
     );
 }
 
 export default RecipeChoices;
+
+
+
+
+/* <div className="recipe-choices">
+            {recipe.map(recipeDetail => {
+                const {name, url} = recipe;
+                const path = url.split('/');
+                const id = path[path.length - 2];
+                return (
+                    <Link to={`/recipeDetail/${id}`} key={id}>
+                        <h1>{name}</h1>
+                    </Link>
+                )
+            })}
+        </div> */
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
