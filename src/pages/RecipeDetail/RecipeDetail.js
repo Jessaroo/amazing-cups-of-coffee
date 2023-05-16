@@ -9,19 +9,19 @@ function RecipeDetail(props) {
     // initialize recipe state
     const [ RecipeDetail, setRecipeDetail ] = useState(null);
     // fetch recipe details and use the corresponding data to set state
-    const fetchRecipe = async () => {
+    const fetchRecipeDetail = async () => {
         try {
             const response = await fetch(url);
-            const recipeData = await response.json();
-            setRecipeDetail(recipeData);
+            const RecipeData = await response.json();
+            setRecipeDetail(RecipeDetail);
+            console.log(RecipeDetail);
         } catch (error) {
-            console.error(error);
-            
+            console.error(error);   
         }
     };
     // use useEffect hook to invoke our fetch function once when to component loads
     useEffect(() => {
-        fetchRecipe();
+        fetchRecipeDetail();
     }, []);
     // conditionally render a loaded or loading component depending on whether or not we have starship data
     const loading = () => {
@@ -32,18 +32,14 @@ function RecipeDetail(props) {
            <div>
                 <h2>{RecipeDetail.name}</h2>
                 <div>
-                    <h3>Recipes</h3>
+                    <h3>Coffee Recipes</h3>
                     <ul>
-                        <li>RecipeDetail Class: {RecipeDetail.recipeDetail_class}</li>
-                        <li>Capacity: {RecipeDetail.recipeDetail_capacity}</li>
-                        <li>Crew (size): {RecipeDetail.crew}</li>
-                        <li>Passengers: {RecipeDetail.passengers}</li>
-                        <li>Manufacturer: {RecipeDetail.manufacturer}</li>
-                        <li>HD Rating: {RecipeDetail.hyperdrive_rating}</li>
+                        <li>RecipeDetail Name: {RecipeDetail.recipeDetail_name}</li>
+                        <li>Ingredients: {RecipeDetail.recipeDetail_ingredients}</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Coffee Recipes</h3>
+                    <h3>Recipe Ingredients</h3>
                     <ul>
                         <li>Appears in {RecipeDetail.recipe?.length} recipe{RecipeDetail.recipe?.length > 1 ? "s": ""}</li>
                     </ul>

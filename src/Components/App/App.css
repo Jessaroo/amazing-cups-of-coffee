@@ -2,31 +2,88 @@
   font-family: helvetica;
   text-align: center;
   display: flex;
-  
 }
 
-.home-page {
-  text-align: center;
-  background-color: aqua;
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyNbaHLjqO_DG-Xk0KyRsHzAL52h7sAEahVQ&usqp=CAU');
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
 }
+
+/* .navbar {
+  background-color: black;
+  color: aqua;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+} */
 
 nav {
   display: flex;
   justify-content: space-between;
-  background-color:blueviolet;
+  background-color: gray;
   color: white;
   padding: 1em;
   font-size: 1.2em;
 }
 
 nav a {
-  color: rgb(174, 116, 215);
+  color: white;
   text-decoration: none;
 }
 
-.container{
+.nav-link {
+  color: pink;
+  text-decoration: none;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
 }
+
+.container a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: rgb(209, 209, 209);
+  text-decoration: underline;
+}
+
+.home-page {
+  text-align: center;
+
+}
+.home-page figure {
+  width: 80%;
+  margin: auto;
+}
+
+.featured-image {
+  width: 100%
+}
+
+
+
+
+/* .home-page {
+  text-align: center;
+  height: 100%;
+  font-family: Lucida;
+  color: black;
+} */
+ 

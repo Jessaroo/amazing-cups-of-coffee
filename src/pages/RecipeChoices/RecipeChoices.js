@@ -2,34 +2,34 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function RecipeChoices(props) {
-    const [ coffee, setCoffee ] = useState([]);
+    const [ recipe, setRecipe ] = useState([]);
 
     // helper function for performing AJAX
-    const fetchCoffee = async () => {
+    const fetchRecipe = async () => {
         try {
             // 1) use the fetch function to make an HTTP request to SWAPI
             const response = await fetch('https://www.thecocktaildb.com/browse.php?s=coffee');
             // 2) take the response response object that gets returned from the fetch function parse it's incoming json body
-            const coffeeData = await response.json();
+            const recipeData = await response.json();
             // 3) set the ships state with the returned JSON data
-            setCoffee(coffeeData.results);
+            setRecipe(recipeData.results);
         } catch (error) {
             
         }
     };
 
     useEffect(() => {
-        fetchCoffee();
+        fetchRecipe();
     }, []);
 
     return (
         <div className="recipe-choices">
-            {coffee.map(coffee => {
-                const {name, url} = coffee;
+            {recipe.map(recipe => {
+                const {name, url} = recipe;
                 const path = url.split('/');
                 const id = path[path.length - 2];
                 return (
-                    <Link to={`/coffee/${id}`} key={id}>
+                    <Link to={`/recipe/${id}`} key={id}>
                         <h1>{name}</h1>
                     </Link>
                 )
