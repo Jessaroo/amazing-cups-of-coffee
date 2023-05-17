@@ -41,21 +41,22 @@ nav a {
   text-decoration: none;
 }
 
-.container {
+.recipe-choices {
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
 }
 
-.container a {
-  color: whitesmoke;
-  text-decoration: none;
+.recipe-card {
+  text-align: center;
 }
 
-.container a:hover {
-  color: rgb(209, 209, 209);
-  text-decoration: underline;
+.recipe-card h1 {
+  font-size: 18px;
+  margin-top: 10px;
+
 }
 
 .home-page {
@@ -70,14 +71,3 @@ nav a {
 .featured-image {
   width: 100%
 }
-
-
-
-
-/* .home-page {
-  text-align: center;
-  height: 100%;
-  font-family: Lucida;
-  color: black;
-} */
- 

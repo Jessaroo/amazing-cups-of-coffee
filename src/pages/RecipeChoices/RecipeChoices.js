@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 export default function RecipeChoices(props) {
@@ -21,18 +21,22 @@ export default function RecipeChoices(props) {
         fetchRecipes();
     }, []);
 
-
+    const navigateToRecipeDetails = (id) => {
+        window.location.href = `/recipe-detail/${id}`;
+    };
 
     return ( 
         <>
         { recipes ? 
             <div className="recipe-choices">
                 {recipes.map((recipe) => (
-                        <div>
-                            {/* <Link to={`/recipe-detail/${id}`} > */}
-                                <img src={recipe.strDrinkThumb} height="75px"></img>
+                        <div className="recipe-card" key={recipe.idDrink}>
+                                <img 
+                                src={recipe.strDrinkThumb} 
+                                height="75px" alt="Recipe Thumbnail" 
+                                onClick={() => navigateToRecipeDetails(recipe.idDrink)}
+                                />
                                 <h1>{recipe.strDrink}</h1>
-                            {/* </Link> */}
                         </div>
                 ))}
             </div>
@@ -42,4 +46,3 @@ export default function RecipeChoices(props) {
         </>
     );
 };
-

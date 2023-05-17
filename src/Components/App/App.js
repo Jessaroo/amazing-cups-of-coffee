@@ -14,7 +14,7 @@ export default function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/RecipeChoices" element={<RecipeChoices />} />
+          <Route path="/Recipes" element={<RecipeChoices />} />
           <Route path="/recipe-detail/:id" element={<RecipeDetail />} />
         </Routes>
       </main>

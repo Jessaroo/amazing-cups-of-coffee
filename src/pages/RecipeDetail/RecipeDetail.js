@@ -27,13 +27,19 @@ function RecipeDetail() {
 
     const loaded = () => {
         const { strDrink, strInstructions } = recipeData;
+        const handlePrint = () => {
+        window.print();
+        };
+
         return (
             <div>
                 <h2>{strDrink}</h2>
-                <div>
+                <div >
                     <h3>Instructions</h3>
                     <p>{strInstructions}</p>
+                    {/* <h1>Coffee Name</h1> */}
                 </div>
+                <button onClick={handlePrint}>Print</button>
             </div>
         );
     };

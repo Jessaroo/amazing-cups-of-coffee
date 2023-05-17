@@ -9,7 +9,7 @@ function HomePage() {
                 Ready to enjoy a delicious cup of coffee at home? If so, check out these recipes for a nice cup of relaxation on a day off. 
                 Click below to get started with some recipes. Enjoy! 
             </p>
-            <Link to="/recipes">Recipe Choices</Link>
+            <Link to="/recipes">All Recipes</Link>
         </div>
     );
 }
