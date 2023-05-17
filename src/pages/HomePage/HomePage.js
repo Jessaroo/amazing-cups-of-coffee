@@ -1,12 +1,16 @@
-function HomePage(props) {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function HomePage() {
     return (
-        <section className="home-page">
-            <h2>Amazing Cups of Coffee</h2>
-            <figure className="featured-image">
-                {/* <img referrerPolicy="no-referrer" alt="Coffee Recipes" src="https://imgur.com/a/ycAJiRM" className="featured-image" /> */}
-                <figcaption>The Best Coffee Recipes</figcaption>
-            </figure>
-        </section>
+        <div>
+            <h2>Enjoy The Amazing Cups of Coffee Recipe Page</h2>
+            <p>
+                Ready to enjoy a delicious cup of coffee at home? If so, check out these recipes for a nice cup of relaxation on a day off. 
+                Click below to get started with some recipes. Enjoy! 
+            </p>
+            <Link to="/recipes">Recipe Choices</Link>
+        </div>
     );
 }
 
