@@ -1,44 +1,105 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 function RecipeChoices(props) {
-    const [ recipe, setRecipeDetail ] = useState([]);
+    const [ recipes, setRecipes ] = useState([]);
 
     // helper function for performing AJAX
-    const fetchRecipeDetail = async () => {
+    const fetchRecipes = async () => {
         try {
-            // 1) use the fetch function to make an HTTP request to SWAPI
-            const response = await fetch('https://www.thecocktaildb.com/browse.php?s=coffee');
+            const response = await fetch('www.thecocktaildb.com/api/json/v1/1/search.php?s=coffee');
             // 2) take the response response object that gets returned from the fetch function parse it's incoming json body
-            const recipeData = await response.json();
-            // 3) set the ships state with the returned JSON data
-            setRecipeDetail(recipeData.results);
+            const recipeData = response.json();
+            setRecipes(recipeData.results);
+            // console.log(recipeData);
+            console.log(response);
         } catch (error) {
             console.error(error);
         }
     };
 
     useEffect(() => {
-        fetchRecipeDetail();
+        fetchRecipes();
     }, []);
 
-    return (
-        <div className="recipe-choices">
+const loading = () => {
+    return <h1>Loading ...</h1>;
+};
+
+const loaded = () => {
+    <div className="recipe-choices">
             {recipes.map(recipe => {
-                const { name, idDrink} = recipeDetail;
+                const { strDrink, strDrinkThumb, idDrink} = recipe;
+                // const path = url.split('/');
+                // const id = path[path.length - 2];
                 return (
-                    <div key={idDrink}>
-                        <Link to={`/recipeDetail/${idDrink}`}>
-                            <h1>{name}</h1>
+                        <Link to={`/recipeDetail/${idDrink}`} key={idDrink}>
+                            <h1>{strDrink}</h1>
                         </Link>
-                    </div>
-                );
+                )
             })}
         </div>
-    );
+};
+
+return <section>{recipes ? loaded() : loading()}</section>;
 }
 
 export default RecipeChoices;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
+
+
+// function RecipeChoices(props) {
+//     const [ recipe, setRecipeDetail ] = useState([]);
+
+//     // helper function for performing AJAX
+//     const fetchRecipeDetail = async () => {
+//         try {
+//             const response = await fetch('https://www.thecocktaildb.com/browse.php?s=coffee');
+//             // 2) take the response response object that gets returned from the fetch function parse it's incoming json body
+//             const recipeData = await response.json();
+//             setRecipeDetail(recipeData.results);
+//         } catch (error) {
+//             console.error(error);
+//         }
+//     };
+
+//     useEffect(() => {
+//         fetchRecipeDetail();
+//     }, []);
+
+//     return (
+//         <div className="recipe-choices">
+//             {recipes.map(recipe => {
+//                 const { name, idDrink} = recipeDetail;
+//                 return (
+//                     <div key={idDrink}>
+//                         <Link to={`/recipeDetail/${idDrink}`}>
+//                             <h1>{name}</h1>
+//                         </Link>
+//                     </div>
+//                 );
+//             })}
+//         </div>
+//     );
+// }
+
+// export default RecipeChoices;
 
 
 
