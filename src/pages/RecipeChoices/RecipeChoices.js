@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function RecipeChoices(props) {
@@ -13,7 +13,6 @@ export default function RecipeChoices(props) {
                 const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=coffee');
                 const recipeData = await response.json();
                 setRecipes(recipeData.drinks);
-                console.log(recipeData);
             } catch (error) {
                 console.error(error);
             }
@@ -21,23 +20,24 @@ export default function RecipeChoices(props) {
         fetchRecipes();
     }, []);
 
-    const navigateToRecipeDetails = (id) => {
-        window.location.href = `/recipe-detail/${id}`;
-    };
+
 
     return ( 
         <>
+        <h1 className="recipeChoice-page-title">Enjoy a new coffee recipe made in the comfort of your home. Click on an image below to see the recipe</h1>
         { recipes ? 
             <div className="recipe-choices">
                 {recipes.map((recipe) => (
                         <div className="recipe-card" key={recipe.idDrink}>
-                                <img 
+                            <Link to={`/recipe-detail/${recipe.idDrink}`}>
+                            <img 
                                 src={recipe.strDrinkThumb} 
                                 height="75px" alt="Recipe Thumbnail" 
-                                onClick={() => navigateToRecipeDetails(recipe.idDrink)}
-                                />
-                                <h1>{recipe.strDrink}</h1>
-                        </div>
+                                // onClick={() => navigateToRecipeDetails(recipe.idDrink)}
+                            />
+                            <h1>{recipe.strDrink}</h1>
+                            </Link>
+                    </div>
                 ))}
             </div>
             :

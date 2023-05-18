@@ -7,6 +7,7 @@ function Nav(props) {
             <nav className="navbar">
                 <div className="nav-container">
                      <Link to="/" className="nav-link">Home</Link>
+                     <span className="nav-space"></span>
                     <Link to="/Recipes" className="nav-link">All Recipes</Link>
                 </div>
             </nav>
