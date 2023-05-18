@@ -1,26 +1,31 @@
 .App {
-  font-family: helvetica;
+  /* font-family: helvetica;
   text-align: center;
-  display: flex;
+  display: flex; */
+  background-image: url("../../imgs/RecipeDetail.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-}
+} */
 
-.header {
+/* .header {
   width: 100%;
-}
+} */
 
-body {
+/* body {
   background-repeat: none;
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin: 0;
-}
+} */
 
 .navbar {
   display: flex;
@@ -48,11 +53,11 @@ nav a {
 
 .recipe-choices {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
   justify-items: center;
   align-items: center;
-  /* padding: 80px; */
+  margin-top: 40px;
 }
 
 .recipe-card {
@@ -71,10 +76,61 @@ nav a {
 }
 
 .recipeChoice-page-title {
-  padding: 80px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 0;
+  margin: 0;
   font-size: 40px;
   color: rgb(18, 167, 167);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-detail-container {
+  /* background-image: url("../../imgs/7.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh; */
+  text-align: left;
+  color: rgb(81, 72, 159);
+  padding: 10px;
+  font-size: 25px;
+  font-style: bold;
+}
+
+.directions-title {
+  padding-bottom: 20px;
+}
+
+.coffee-name {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 80px;
+}
+
+.recipe-directions {
+  text-align: left;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.printbtn {
+  background-color: #1f09bf;
+  color: rgb(106, 182, 240);
+  border-radius: 50%;
+  width: 125px;
+  height: 50px;
+  font-size: 25px;
+  transition: 0 0 10px black;
+}
+
+.printbtn:hover {
+  background-color: black;
+  color: white;
 }
 
 .home-page {
@@ -120,7 +176,7 @@ nav a {
 .container {
   width: 300px;
   height: 280px;
-  position: absolute;
+  position: relative;
   top: calc(50% - 140px);
   left: calc(50% - 150px);
 }

@@ -13,14 +13,11 @@ function HomePage() {
                         Click below to get started with some recipes. Enjoy! 
                     </p>
                     </div>
-                    <div className="coffee-animation-container">
-                    <CoffeeAnimation />
                 </div>
-                
-            </div>
                 <div>
                 <Link to="/recipes" className="home-page-link">All Recipes</Link>
-                </div>  
+                </div> 
+                <CoffeeAnimation /> 
         </div>
       
     );

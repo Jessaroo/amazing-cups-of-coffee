@@ -20,8 +20,6 @@ export default function RecipeChoices(props) {
         fetchRecipes();
     }, []);
 
-
-
     return ( 
         <>
         <h1 className="recipeChoice-page-title">Enjoy a new coffee recipe made in the comfort of your home. Click on an image below to see the recipe</h1>
@@ -33,7 +31,6 @@ export default function RecipeChoices(props) {
                             <img 
                                 src={recipe.strDrinkThumb} 
                                 height="75px" alt="Recipe Thumbnail" 
-                                // onClick={() => navigateToRecipeDetails(recipe.idDrink)}
                             />
                             <h1>{recipe.strDrink}</h1>
                             </Link>
