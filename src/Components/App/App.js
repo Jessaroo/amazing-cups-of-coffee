@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="App">
       <Nav />
-      <main className="container">
+      <main className="main-whole-app">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Recipes" element={<RecipeChoices />} />

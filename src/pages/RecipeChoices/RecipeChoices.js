@@ -22,7 +22,7 @@ export default function RecipeChoices(props) {
 
     return ( 
         <>
-        <h1 className="recipeChoice-page-title">Enjoy a new coffee recipe made in the comfort of your home. Click on an image below to see the recipe</h1>
+        <h1 className="recipeChoice-page-title">Enjoy a new coffee recipe made in the comfort of your home!! Click on an image below to see the recipe.</h1>
         { recipes ? 
             <div className="recipe-choices">
                 {recipes.map((recipe) => (

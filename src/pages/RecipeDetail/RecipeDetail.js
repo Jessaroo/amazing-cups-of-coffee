@@ -32,6 +32,7 @@ function RecipeDetail() {
         };
 
         return (
+            <div className="details-page">
             <div className="recipe-detail-container">
                 <div>
                     <h2 className="coffee-name">{strDrink}</h2>
@@ -41,6 +42,7 @@ function RecipeDetail() {
                     </div>
                     <button onClick={handlePrint} className="printbtn">Print</button>
                 </div>
+            </div>
             </div>
         );
     };

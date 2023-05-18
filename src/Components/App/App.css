@@ -1,4 +1,4 @@
-.App {
+.details-page {
   /* font-family: helvetica;
   text-align: center;
   display: flex; */
@@ -58,6 +58,7 @@ nav a {
   justify-items: center;
   align-items: center;
   margin-top: 40px;
+  background-color: rgb(62, 164, 148);
 }
 
 .recipe-card {
@@ -89,20 +90,17 @@ nav a {
 }
 
 .recipe-detail-container {
-  /* background-image: url("../../imgs/7.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh; */
-  text-align: left;
+  text-align: center;
   color: rgb(81, 72, 159);
   padding: 10px;
   font-size: 25px;
-  font-style: bold;
+  font-weight: bold;
+  margin-left: 0;
+
 }
 
 .directions-title {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .coffee-name {
@@ -116,6 +114,9 @@ nav a {
   font-size: 30px;
   padding-top: 10px;
   padding-bottom: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  backdrop-filter: blur(80px);
 }
 
 .printbtn {
@@ -134,18 +135,17 @@ nav a {
 }
 
 .home-page {
-  margin-top: 150px;
-  margin-bottom: 20px;;
+  padding-top: 10px; 
+  padding-bottom: 50px;
   text-align: center;
+  font-size: 40px;
+  margin-top: -300px;
 }
 
 .home-page-link {
-  margin-top: 20px;
-}
-
-.home-page figure {
-  width: 80%;
-  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 50px;
 }
 
 .featured-image {
@@ -157,20 +157,24 @@ nav a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height:100vh;
+  background-color: #41bdad;
+  
 }
 
 .home-page-content {
-  margin-bottom: 40px;
+  /* margin-bottom: 500px; */
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .coffee-animation-container {
-  margin-top: 40px;
+  margin-top: 200px;
 }
 
 .text-container {
   margin-bottom: 20px;
+  
 }
 
 .container {
@@ -180,6 +184,7 @@ nav a {
   top: calc(50% - 140px);
   left: calc(50% - 150px);
 }
+
 .coffee-header {
   width: 100%;
   height: 80px;
