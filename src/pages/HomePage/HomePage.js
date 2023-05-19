@@ -8,7 +8,7 @@ function HomePage() {
             <div className="home-page-content">
                 <div className="text-container">
                     <h2 className="home-page">Enjoy a New Coffee Recipe Today</h2>
-                    <p>
+                    <p className="Intro">
                         Ready to enjoy a delicious cup of coffee at home? If so, check out these recipes for a nice cup of relaxation on a day off. 
                         Click below to get started with some recipes. Enjoy! 
                     </p>

@@ -33,7 +33,7 @@ export default function RecipeChoices(props) {
                             />
                             <h1>{recipe.strDrink}</h1>
                             </Link>
-                    </div>
+                        </div>
                 ))}
             </div>
             :

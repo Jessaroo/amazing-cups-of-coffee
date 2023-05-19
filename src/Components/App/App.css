@@ -60,12 +60,13 @@ nav a {
   margin-bottom: 20px;
   padding: 0;
   margin: 0;
-  font-size: 40px;
+  font-size: 45px;
   color: rgb(18, 167, 167);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px 2px black;
 }
 
 .recipe-detail-container {
@@ -117,7 +118,8 @@ nav a {
   padding-top: 10px; 
   padding-bottom: 50px;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
+  text-shadow: 4px 4px 8px rgb(129, 100, 232);
   margin-top: -300px;
 }
 
@@ -125,6 +127,7 @@ nav a {
   margin-top: 10px;
   margin-bottom: 20px;
   padding-top: 50px;
+  font-size: 25px;
 }
 
 .featured-image {
@@ -138,7 +141,6 @@ nav a {
   justify-content: center;
   height:100vh;
   background-color: #41bdad;
-  
 }
 
 .home-page-content {
@@ -152,7 +154,11 @@ nav a {
 
 .text-container {
   margin-bottom: 20px;
-  
+}
+
+.Intro {
+  font-size: 40px;
+  color: rgb(55, 8, 117);
 }
 
 .container {
