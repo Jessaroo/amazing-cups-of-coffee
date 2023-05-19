@@ -7,7 +7,6 @@ export default function RecipeChoices(props) {
 
 
     useEffect(() => {
-        // const fetchRecipes = async () => {
             async function fetchRecipes() {
             try {
                 const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=coffee');

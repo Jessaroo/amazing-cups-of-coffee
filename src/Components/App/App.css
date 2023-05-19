@@ -1,31 +1,10 @@
 .details-page {
-  /* font-family: helvetica;
-  text-align: center;
-  display: flex; */
   background-image: url("../../imgs/RecipeDetail.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
 }
-
-/* body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-} */
-
-/* .header {
-  width: 100%;
-} */
-
-/* body {
-  background-repeat: none;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin: 0;
-} */
 
 .navbar {
   display: flex;
@@ -163,7 +142,6 @@ nav a {
 }
 
 .home-page-content {
-  /* margin-bottom: 500px; */
   text-align: center;
   padding-bottom: 10px;
 }
