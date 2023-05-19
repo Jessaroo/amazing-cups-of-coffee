@@ -2,7 +2,12 @@
 
 ## Do you enjoy drinking coffee? If so, you're in the right place. Ever get tired of drinking the same home made coffee? Try a new recipe out. These recipes do contain alcohol so they're probably enjoyed best at home on a day off. I love coffee and when I make coffee at home I never try any recipes. I know so many people who do the same thing that I do just brew add either creamer or syrup and milk. That gets boring over the years so I thought it would be nice to have some recipes at least for my days off to relax and enjoy a different coffee at home. 
 
-![WireFrameHome](/src/imgs/ScreenshotHome.jpeg)
+https://amazing-cups-of-coffee.netlify.app/recipe-detail/12770
+
+
+![WireFrameHome](/src/imgs/Home.jpeg)
+![WireFramerecipeChoices](/src/imgs/recipeChoices.jpeg)
+![WireFramerecipe](/src/imgs/recipe.jpeg)
 
 ## Getting Started: To start browsing the recipes click on the link below. When you are on the home page you can click the button to go to the recipes selection to choose from. When you see a recipe that looks tasy click on the image to see the recipe. Follow the directions and enjoy. If you want to print the recipe out feel free to do so with the provided button on the recipe page. Enjoy! 
 
