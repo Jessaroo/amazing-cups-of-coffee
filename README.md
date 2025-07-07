@@ -6,7 +6,7 @@
 ## Getting Started: To start browsing the recipes click on the link below. When you are on the home page you can click the button to go to the recipes selection to choose from. When you see a recipe that looks tasy click on the image to see the recipe. Follow the directions and enjoy. If you want to print the recipe out feel free to do so with the provided button on the recipe page. Enjoy! 
 
 
-https://amazing-cups-of-coffee.netlify.app/recipe-detail/12770
+https://amazing-cups-of-coffee.netlify.app/
 
 
 ## Technologies used: React.js, API, CSS, jsx, Netlify.
