@@ -6,7 +6,7 @@
 ## Getting Started: To start browsing the recipes click on the link below. When you are on the home page you can click the button to go to the recipes selection to choose from. When you see a recipe that looks tasy click on the image to see the recipe. Follow the directions and enjoy. If you want to print the recipe out feel free to do so with the provided button on the recipe page. Enjoy! 
 
 
-https://amazing-cups-of-coffee.netlify.app/recipe-detail/12770
+https://amazing-cups-of-coffee.netlify.app/
 
 
 ## Technologies used: React.js, API, CSS, jsx, Netlify.
@@ -18,5 +18,8 @@ https://amazing-cups-of-coffee.netlify.app/recipe-detail/12770
 ## Contribute to the project by forking and cloning it. Add anything that you feel would enhance the users experience. I would like to find another API to use that would update and change the recipes so that it's not the same recipes being displayed all the time. I would also like to add a search area for the user to be able to search for the recipes by typing.
 
 ## Honorable mentions: Used https://codepen.io/hjdesigner/pen/jvyJdX.
+<<<<<<< HEAD
 
 ## Project Wireframe. ![Project Wireframe](src/imgs/wireframe.png)
+=======
+>>>>>>> c39799e7cc4ee72ccd1cec8eb63145b5a3e13ce6
