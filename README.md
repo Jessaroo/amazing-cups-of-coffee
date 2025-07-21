@@ -18,8 +18,5 @@ https://amazing-cups-of-coffee.netlify.app/
 ## Contribute to the project by forking and cloning it. Add anything that you feel would enhance the users experience. I would like to find another API to use that would update and change the recipes so that it's not the same recipes being displayed all the time. I would also like to add a search area for the user to be able to search for the recipes by typing.
 
 ## Honorable mentions: Used https://codepen.io/hjdesigner/pen/jvyJdX.
-<<<<<<< HEAD
 
 ## Project Wireframe. ![Project Wireframe](src/imgs/wireframe.png)
-=======
->>>>>>> c39799e7cc4ee72ccd1cec8eb63145b5a3e13ce6
